@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Spartan", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+    
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #ffbd27;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+body {
+    width: 100%;
+}
+
+/* Header start */
+
+
+
+
+/* Header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+    background-color: #ee1b1b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#header img {
+    width: 120px;
+}
+
+/* Navbar */
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    margin-left: 2%;
+}
+
+#nav li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #1a1a1a;
+    transition: 0.3s;
+}
+
+#nav li a:hover,
+#nav li a.active {
+    color: #14eedf;
+}
+#nav li a.active::after,
+#nav li a:hover::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+/* Hero Section */
+#hero {
+    height: 90vh;
+    width: 100%;
+    background-image: url("images/hero4.png"); /* غيرها حسب صورتك */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+    
+
+    
+}
+
+#hero h4{
+    font-size: 22px;
+    color: #088178;
+    margin-bottom: 10px;
+}
+.hero-text h5 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 18px;
+}
+
+
+.hero button:hover {
+    color: #088178;
+}
+.btn{
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.btn::after{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.btn::before{
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,#ff7300,#fffb00,#48ff00,
+        #00ffd5, #002bff, #ff00cb, #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+@keyframes glowing {
+    0%{background-position:0 0;}
+    50%{background-position:400% 0;}
+    100%{background-position:0 0;}       
+}
+.btn:hover::before{
+    opacity: 1;
+}
+.btn:active:after{
+    background: transparent;
+}
+.btn:active{
+    color: #000;
+    font-weight: bold;
+}
+/* Header end */
+/* Hero Section end */
+/* Featured Section */
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+}
